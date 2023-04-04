@@ -17,11 +17,7 @@
 - SQLite：嵌入式的微型数据库，作为Android的内置数据库
 - MariaDB：开源免费中小型数据库
 
-### SQL简介
-- Structured Query Language，简称SQL，结构化查询语言
-- 操作关系型数据库的编程语言
-- 定义操作所以关系型数据库的统一标准，可以使用SQL操作所有关系型数据库管理系统
-
+## MySQL
 ### MySQL安装与卸载
 https://downloads.mysql.com/archives/community/
 -上面的链接为mysql下载页面
@@ -56,3 +52,39 @@ https://downloads.mysql.com/archives/community/
     - MySQL中可以创建多个数据库，每个数据库对应磁盘中的一个文件夹
     - 每个数据库中可以创建多个表，每张表对应磁盘中的frm文件
     - 每张表可以存储多条数据，数据会存储到磁盘的MYD文件中
+
+## SQL
+### SQL简介
+- Structured Query Language，简称SQL，结构化查询语言
+- 操作关系型数据库的编程语言
+- 定义操作所以关系型数据库的统一标准，可以使用SQL操作所有关系型数据库管理系统
+
+### 通用语法
+- SQL语句可以单行或多行书写，以分号结尾
+- MySQL数据库中的SQL语句不区分大小写，关键字建议大写
+- 注释
+    - 单行注释：`-- 注释内容` 或 `#注释内容`(MySQL特有)
+    > 注意：使用`--`添加单行注释时，`--`后面必须加上空格，而`#`没有要求
+    - 多行注释：`/* 注释 */`
+
+### SQL分类
+- DDL(Data Definition Language)：数据定义语言，用来定义数据库对象：数据库、表、列等
+- DML(Data Manipulation Language)：数据操作语言，用来对数据库中表的数据进行增删改
+- DQL(Data Query Language)：数据查询语言，用来查询数据库中表的记录
+- DCL(Data Control Language)：数据控制语言，用来定义数据库的访问权限和安全级别，及创建用户
+
+### DDL
+- 查询所有的数据库
+```sql
+SHOW DATABASES;
+```
+在未创建创建数据库时，查询到的数据库是MySQL安装好后自带的数据库，一般不对其进行操作
+- 创建数据库
+```sql
+CREATE DATABASE 数据库名称;
+```
+当创建数据库的时候使用的数据库名称已经存在，会出现报错，所以创建数据库之前应该进行判断
+```sql
+CREATE DATABASE IF NOT EXISTS 数据库名称;
+```
+- 删除数据库
