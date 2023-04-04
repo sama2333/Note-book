@@ -34,7 +34,9 @@ np.linspace(0, 2, 9) # 左闭右闭，第三个参数是步长
 ```
 - 创建随机数组
 ```python
-np.random.random((2, 3)) #生成[0,1)之间的随机浮点数组
+np.random.random((2, 3)) # 无约束条件随机数
+np.random.rand(3, 4) # 均匀分布随机数
+np.random.randn(2, 2, 3) # 正态分布随机数
 ```
 ### 数组打印
 数组打印遵循以下规律：
@@ -56,6 +58,14 @@ np.exe(B)
 np.sqrt(B)
 np.add(B, C)
 ```
+- 简单统计分析
+```python
+np.argsort() # 返回排序后下表
+np.tile() # 数组复制
+np.repeat() # 数组元素复制
+np.mean() # 元素均值
+np.argmax() # 最大值的索引
+```
 
 ### 数组切片
 - 一维的数组可以进行索引、切片、迭代操作，与列表一致
@@ -72,6 +82,7 @@ np.add(B, C)
     - `revel()`将数组转化为一维数组
     - `reshape()`将数组转化为指定的维度数组
     - `T`数组转置
+    - `I`逆矩阵
     - `resize()`将数组本身修改为指定的维度
 - 将不同数组堆叠
     - `vstack()`将数组行堆叠
