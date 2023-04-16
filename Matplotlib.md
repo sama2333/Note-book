@@ -24,4 +24,7 @@ plt.show() # 显示图形
 plt.rcParams['font.sans-serif'] = 'SimHei'  # 设置中文显示
 plt.rcParams['axes.unicode_minus'] = False # 解决坐标轴负号乱码
 ```
-- 绘制折线图
+- `plt.scatter()`散点图
+- `plt.plot()`折线图
+- `plt.pie()`饼图
+- `plt.boxplot()`箱线图

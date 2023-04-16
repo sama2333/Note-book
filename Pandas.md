@@ -24,6 +24,8 @@
 ### 数据处理
 - `rename()`修改列名
 - `drop()`删除元素
+- `drop_duplicates()`删除重复行
+- `append()`添加行
 - `to_datetime()`转换时间序列
 
 ### 描述分析
@@ -65,10 +67,10 @@
 - `apply()`函数处理数组中的全部数据
 - `str`字符串处理功能
 
-### 合并
+### 连接
 - `concat()`连接Pandas对象
 - `merge()`SQL风格的连接
-- `append()`添加行
+- `combine_first()`将两个数组合并并填充缺失值
 
 ### 分组
 - `groupby()`按照条件分组，可进行单列或多列分组
