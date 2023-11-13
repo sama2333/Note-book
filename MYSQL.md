@@ -258,13 +258,38 @@ SELECT [DISTINCT] [TOP n [WITH TIES]] select_list  // 搜寻结果唯一化&查�
 - 条件查询
 ```sql
 SELECT 字段列表 FROM 表名 WHERE 条件列表;
+SELECT * FROM Web WHERE country = 'CN'; --文本字段
+SELECT * FROM Web WHERE id = 1; --数值字段
 ```
+- 运算符
+
+运算符|描述
+---|---
+=|等于
+<>|不等于。注释：在某些版本中写为 !=
+\>|大于
+<|小于
+\>=|大于等于
+<=|小于等于
+BETWEEN AND|在某个范围内(包含两端值)
+LIKE|某种搜索模式
+IN|针对某个列的多个可能值
+AND|两个条件都成立，则显示一条记录
+OR|第一个条件和第二个条件只要有一个成立，则显示一条记录
+
 - 模糊查询练习
 > 模糊查询使用like关键字，可以使用通配符进行占位:
 >
 > （1）_ : 代表单个任意字符
 >
 > （2）% : 代表任意个数字符
+
+-范围查询
+```sql
+SELECT * FROM Web WHERE sal BETWEEN 1500 AND 3000; --指定两端范围
+SELECT * FROM Web WHERE sal IN(5000, 3000, 1500); --指定值
+```
+
 - 排序查询
 ```sql
 SELECT 字段列表 FROM 表名 ORDER BY 排序字段名1 [排序方式1],排序字段名2 [排序方式2] …;
