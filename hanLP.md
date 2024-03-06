@@ -17,4 +17,4 @@ pos = hanlp.load(hanlp.pretrained.pos.PKU_POS_ELECTRA_SMALL)
 pos.dict_tags = {'HanLP': 'state-of-the-art-tool'}
 # 按照上下文定义词性
 pos.dict_tags = {('的', '希望'): ('补语成分', '名词'), '希望': '动词'}
-```
+
